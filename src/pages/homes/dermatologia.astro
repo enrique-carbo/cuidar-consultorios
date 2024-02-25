@@ -1,0 +1,136 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Features from '~/components/widgets/Features.astro';
+
+const metadata = {
+  title: 'Dermatología',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    image={{ src: '~/assets/images/dermatologist.png', alt: 'Dermatologia Hero Image' }}
+  >
+    <Fragment slot="title">
+      <span class="text-3xl md:text-5xl">Dermatología</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span>La dermatología es la especialidad médica que se enfoca en diagnosticar
+        y tratar enfermedades de la piel, el pelo y las uñas.</span>          
+    </Fragment>
+  </Hero>
+
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    subtitle=`La dermatología se basa mucho en la clínica, en la observación e interpretación
+    de los síntomas y signos para un diagnóstico acertado.
+    Los estudios complementarios son de gran importancia y nos ayudan a realizar una
+    evaluación de los procesos salud enfermedad, a confirmar presunciones y acompañar en
+    el seguimiento.`
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    title="Cuida tu piel"
+    subtitle="Consultar a un dermatólogo puede mejorar la precisión del diagnóstico y optimizar los planes de tratamiento. Los dermatólogos pueden diagnosticar una amplia gama de afecciones cutáneas, desde dermatitis hasta neoplasias."
+    columns={3}
+    items={[
+      {
+        title: 'Alopecias',
+        description:
+          'Las alopecias pueden ser causadas por factores genéticos, autoinmunes, infecciosos, nutricionales, entre otros.',
+        icon: 'hair',
+      },
+      {
+        title: 'Acné',
+        description: 'Enfermedad común de la piel que ocurre cuando los folículos pilosos se obstruyen e inflaman.',
+        icon: 'acne',
+      },
+      {
+        title: 'Dermatitis',
+        description:
+          'La dermatitis es una afección común de la piel que causa inflamación, enrojecimiento, picazón y descamación.',
+        icon: 'dermatitis',
+      },
+      {
+        title: 'Psoriasis',
+        description: 'La psoriasis es una enfermedad crónica que causa parches rojos, gruesos y escamosos, con síntomas como picazón, ardor y dolor.',
+        icon: 'psoriasis',
+      },
+      {
+        title: 'Neoplasias',
+        description:
+          'El dermatólogo juega un papel fundamental en la prevención, diagnóstico, tratamiento y seguimiento del cáncer de piel.',
+        icon: 'screening',
+      },
+      {
+        title: 'Infecciones',
+        description: 'Incluyen infecciones bacterianas, fúngicas (hongos) y virales.',
+        icon: 'hpv',
+      },
+    ]}
+  />
+
+ <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Microscopia digital de piel, pelos y uñas"
+    subtitle="La dermoscopía ayuda al dermatólogo a detectar con mayor precisión las alteraciones de la piel, lo que facilita el diagnóstico y permite un tratamiento adecuado."
+    items={[
+      {
+        title: 'Dermatoscopia',
+        description:
+          'Ayuda a diagnosticar lesiones pigmentadas y no pigmentadas, lo que mejora la evaluación y disminuye la necesidad de biopsias innecesarias.',
+        icon: 'melanoma',
+      },
+      {
+        title: 'Tricoscopia',
+        description:
+          'Ayuda en el diagnóstico de trastornos del pelo y del cuero cabelludo, mejorando la capacidad de valoración más allá de la inspección clínica.',
+        icon: 'tricoscopia',
+      },
+      {
+        title: 'Onicoscopia',
+        description:
+          'Útil en el diagnóstico de enfermedades de las uñas, como infecciones, enfermedades autoinmunes y tumores.',
+        icon: 'onicoscopia',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[{
+      variant: "primary",
+      target: '_blank',
+      text: 'Turnos',
+      href: 'https://github.com/onwidget/astrowind',
+      icon: 'tabler:calendar',
+    }]}
+  >
+    <Fragment slot="title">Solicitá tu turno</Fragment>
+
+    <Fragment slot="subtitle">
+     No esperes más para comenzar a <span class="font-bold">CUIDAR</span> tu piel.
+    </Fragment>
+  </CallToAction>
+</Layout>

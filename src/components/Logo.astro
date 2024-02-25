@@ -1,0 +1,11 @@
+---
+import { SITE } from '~/utils/config';
+import { Image } from 'astro:assets';
+import logo from '~/assets/images/logo1-280x280.jpg';
+
+---
+
+<Image src={logo} alt="Logo CUIDAR." width="40" height="40"/>
+<span class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white">
+  {SITE?.name}
+</span>

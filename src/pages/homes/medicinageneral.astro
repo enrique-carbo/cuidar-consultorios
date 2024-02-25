@@ -1,0 +1,134 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Features from '~/components/widgets/Features.astro';
+
+const metadata = {
+  title: 'Medicina General',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    image={{ src: '~/assets/images/doctor-hero-mg.png', alt: 'Medicina General Hero Image' }}
+  >
+    <Fragment slot="title">
+      <span class="text-3xl md:text-5xl">Medicina General</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span>Rama de la medicina que se enfoca en la prevención, el diagnóstico y el tratamiento
+        de una amplia variedad de enfermedades y afecciones médicas.</span>          
+    </Fragment>
+  </Hero>
+
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    subtitle=`Los médicos generales son especialistas en medicina, que tienen un 
+    conocimiento amplio y profundo de diversas áreas, lo que les permite abordar una
+    variedad de problemas de salud.`
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    title="Primer contacto con el sistema de salud"
+    subtitle="Los médicos generales son a menudo el primer punto de contacto para los pacientes que buscan atención médica. Realizan exámenes físicos, toman historias clínicas detalladas, ordenan pruebas de diagnóstico, y brindan diagnósticos y tratamientos para enfermedades comunes."
+    columns={3}
+    items={[
+      {
+        title: 'Control de Salud',
+        description:
+          'Se recomienda un control anual clínico donde se realiza un exámen físico, se controlan signos vitales y antropometría.',
+        icon: 'health-icon',
+      },
+      {
+        title: 'Tamizaje',
+        description: 'Se solicitan estudios bioquímicos y por imágenes.',
+        icon: 'screening',
+      },
+      {
+        title: 'Hipertensión arterial',
+        description:
+          'El control de la presión arterial se asocia con una reducción en la mortalidad y morbilidad cardiovascular.',
+        icon: 'blood-pressure',
+      },
+      {
+        title: 'Diabetes',
+        description: 'La monitorización de la glucosa es esencial para el manejo de la diabetes.',
+        icon: 'diabetes',
+      },
+      {
+        title: 'Sindrome Metabólico',
+        description:
+          'Brindar orientación sobre cambios en el estilo de vida y la prevención de complicaciones a largo plazo.',
+        icon: 'overweight',
+      },
+      {
+        title: 'Osteoporosis',
+        description: 'La osteoporosis aumenta el riesgo de fracturas óseas, especialmente en muñecas, columna y cadera.',
+        icon: 'bone',
+      },
+    ]}
+  />
+
+ <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Tamizaje en enfermedades neoplásicas"
+    subtitle="El screening o tamizaje es crucial para detectar el cáncer antes de que cause síntomas, mejorando el pronóstico. Los exámenes recomendados varían según la edad y el sexo."
+    items={[
+      {
+        title: 'Cáncer colorrectal',
+        description:
+          'Se utiliza para detectar pólipos precancerosos o cáncer en etapas tempranas. Entre las pruebas recomendadas esta la sangre oculta.',
+        icon: 'intestine',
+      },
+      {
+        title: 'Cáncer de pulmón',
+        description:
+          'El screening de cáncer de pulmón se realiza en personas con alto riesgo, como fumadores con años en el hábito.',
+        icon: 'lung',
+      },
+      {
+        title: 'Cáncer de próstata',
+        description:
+          'El tamizaje para el cáncer de próstata generalmente se realiza mediante un análisis de sangre.',
+        icon: 'prostate',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[{
+      variant: "primary",
+      target: '_blank',
+      text: 'Turnos',
+      href: 'https://github.com/onwidget/astrowind',
+      icon: 'tabler:calendar',
+    }]}
+  >
+    <Fragment slot="title">Solicitá tu turno</Fragment>
+
+    <Fragment slot="subtitle">
+     No esperes más para comenzar a <span class="font-bold">CUIDAR</span> tu salud.
+    </Fragment>
+  </CallToAction>
+</Layout>
