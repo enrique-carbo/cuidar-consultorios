@@ -35,8 +35,8 @@ export const headerData = {
       text: 'Servicios',
       links: [
         {
-          text: 'Pilares (Anchor Link)',
-          href: getPermalink('/#features'),
+          text: 'Turnos Web',
+          href: getPermalink('/#turnosweb'),
         },
         {
           text: 'Demanda Espontánea',
@@ -55,11 +55,11 @@ export const headerData = {
           href: getPermalink('/contact'),
         },
         {
-          text: 'Terms',
+          text: 'Términos',
           href: getPermalink('/terms'),
         },
         {
-          text: 'Privacy policy',
+          text: 'Políticas de Privacidad',
           href: getPermalink('/privacy'),
         },
       ],
@@ -137,10 +137,10 @@ export const footerData = {
       ],
     },
     {
-      title: 'Platform',
+      title: 'Servicios',
       links: [
-        { text: 'Developer API', href: '#' },
-        { text: 'Partners', href: '#' },
+        { text: 'Turnos Web', href: '/#turnosweb' },
+        { text: 'Demanda espontánea', href: '/#demandaespontanea' },
         { text: 'Atom', href: '#' },
         { text: 'Electron', href: '#' },
         { text: 'AstroWind Desktop', href: '#' },
@@ -171,7 +171,7 @@ export const footerData = {
   ],
   secondaryLinks: [
     { text: 'Términos', href: getPermalink('/terms') },
-    { text: 'Política de Privacidad', href: getPermalink('/privacy') },
+    { text: 'Políticas de Privacidad', href: getPermalink('/privacy') },
   ],
   socialLinks: [
     { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
