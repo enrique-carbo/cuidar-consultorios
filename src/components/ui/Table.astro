@@ -1,0 +1,50 @@
+--- 
+
+import type { TableData } from "~/types";
+
+const {
+  title = '',
+  columnsNames = ['Institución', 'Dirección', 'Teléfono', 'Localidad', 'Sitio Web'],
+  rowsData= [],  
+  
+} = Astro.props as TableData;
+---
+
+
+
+
+<div class="px-2 py-2 max-w-5xl container mx-auto">
+<h3 class="text-2xl font-bold uppercase tracking-wide text-center my-4"> {title} </h3>
+
+<div class="overflow-x-auto">
+<table class="w-full">
+    <thead>
+
+     <tr>
+     {columnsNames.map((name) => {
+        return (
+        <th class="border px-4 py-2 text-center bg-gray-800 font-medium text-white w-auto">{name}</th>
+        )
+       })
+     }
+     </tr>
+   </thead>
+
+   <tbody>
+      {rowsData.map((row) => { return (
+
+        <Fragment>
+        <tr class="bg-gray-400 hover:bg-zinc-500 focus-within:bg-orange-100">
+         <td class="border px-4 py-2 text-left"> {row.name} </td>
+         <td class="border px-4 py-2 text-right"> {row.address}</td>
+         <td class="border px-4 py-2 text-right"> {row.phone} </td>
+         <td class="border px-4 py-2 text-right"> {row.location} </td>
+         <td class="border px-4 py-2 text-right"> {row.web} </td>
+        </tr>
+        </Fragment>
+      )}
+      )}  
+   </tbody>
+</table>
+</div>
+</div>

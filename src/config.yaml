@@ -9,14 +9,14 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: CUIDAR
+    template: '%s — CUIDAR'
+  description: "\U0001F680 Webpage about medical office CUIDAR Consultorios."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: CUIDAR
     images:
       - url: '~/assets/images/default.png'
         width: 1200

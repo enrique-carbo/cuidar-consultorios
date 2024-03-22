@@ -280,3 +280,19 @@ export interface Content extends Headline, Widget {
 }
 
 export interface Contact extends Headline, Form, Widget {}
+
+
+// MY TYPES
+
+export interface TableData {
+  title?: string;
+  columnsNames?: string[];
+  rowsData?: Array<{
+    name?: string;
+    address?: string;
+    phone?: string;
+    location?: string;
+    web?: string;
+}>
+}
+

@@ -1,0 +1,254 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Features2 from '~/components/widgets/Features2.astro'
+import Features3 from '~/components/widgets/Features3.astro';
+import Table from '~/components/ui/Table.astro';
+import type { TableData } from "~/types";
+
+const metadata = {
+  title: 'Emergencias',
+};
+
+const rowsDataHospital: TableData = {
+  title: 'Hospitales',
+  rowsData: 
+  [
+    {name: 'Hospital San Martin', address: 'Presidente Perón 450', phone: '0343 - 4234545', location: 'Paraná, E.Ríos', web: 'Sin datos'},
+    {name: 'Hospital San Roque', address: 'La Paz 435', phone: '0343 - 4230460', location: 'Paraná, E.Ríos', web: 'https://www.hospitalsanroque.gob.ar'}
+  ]
+}
+
+const rowsDataSanatorio: TableData = {
+  title: 'Sanatorios',
+  rowsData: 
+  [
+    {name: 'Sanatorio La Entrerriana', address: 'Buenos Aires 550', phone: '0343 - 4200500', location: 'Paraná, E.Ríos', web: 'https://www.slaentrerriana.com.ar'},
+    {name: 'Clínica Modelo', address: 'San Martin 1238', phone: '0343 - 4420400', location: 'Paraná, E.Ríos', web: 'https://clinicamodelosa.com.ar'},
+    {name: 'Sanatorio Río', address: 'España 350', phone: '0343 - 4314856 / 4313618', location: 'Paraná, E.Ríos', web: 'http://sanatoriorio.com/'},
+    {name: 'Instituto Cardiovascular de Entre Rios', address: 'Italia 142', phone: '0343 - 4311800', location: 'Paraná, E.Ríos', web: 'Sin datos'},
+    {name: 'Instituto de Traumatologia y Enfermedades Oseas', address: 'San Martin 1247', phone: '0343 - 4232352', location: 'Paraná, E.Ríos', web: 'http://www.iteosrl.com.ar'},
+    {name: 'Sanatorio del Niño', address: 'Libertad 78', phone: '0343 - 4315331', location: 'Paraná, E.Ríos', web: 'https://sanatoriodelnino.com.ar'},
+    {name: 'Sanatorio Adventista del Plata', address: '25 de mayo 255', phone: '0343 - 4200200', location: 'Libertador San Martin, E.Ríos', web: 'https://sanatorioadventista.org.ar'}
+  ]
+}
+
+
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText
+    title="Urgencias"
+    subtitle="¿Que debo hacer en caso de urgencia o emergencia en salud?"
+  />
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    title="Conceptos y definiciones"
+    subtitle="¿Que diferencias existen entre urgencias y emergencias?"
+    columns={2}
+    items={[
+      {
+        title: 'Urgencia',
+        description: 'Una <span class="font-bold">urgencia médica</span> se refiere a una situación, que se presenta en forma inesperada, en la que una persona necesita <span class="font-bold">atención médica rápida</span> debido a una enfermedad o lesión que puede causar dolor intenso o discapacidad, pero no pone en peligro inmediato la vida, pero de todas formas el individuo debe ser atendido dentro de las próximas horas.',
+        icon: 'urgency',
+      },
+      {
+        title: 'Emergencia',
+        description: 'Una <span class="font-bold">emergencia médica</span> es una situación en la que una persona requiere <span class="font-bold">atención médica inmediata</span> debido a una enfermedad o lesión que pone en peligro su vida, puede causar discapacidad permanente o causa un dolor intenso.',
+        icon: 'emergency',
+      },
+    ]}
+    classes={{ container: 'max-w-5xl'}}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="En caso de emergencia llamar siempre:"
+    tagline="Emergencias"
+    columns={2}
+    items={[
+      {
+        title: '911',
+        description:
+          'Línea gratuita del servicio público de emergencias.',
+        icon: 'tabler:phone-plus',
+        classes:{title:'text-3xl md:text-5xl'} 
+      },
+      {
+        title: '107',
+        description:
+          'Línea gratuita del servicio público de emergencias médicas.',
+        icon: 'tabler:phone-plus',
+        classes:{title:'text-3xl md:text-5xl'}
+      },
+    ]
+    
+    }
+    classes={{ container: 'max-w-5xl' }}
+      
+  />
+
+  
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="Posibles causas de Emergencias."
+    isReversed={true}
+    items={[
+      {
+        title: 'Enfermedades cardiovasculares',
+        description: 'Infartos, Arritmias, Insuficiencia cardíaca, Accidente Cerebrovascular.',
+        icon: 'tabler:number-1-small',
+      },
+      {
+        title: 'Traumatismos de cráneo',
+        icon: 'tabler:number-2-small',
+      },
+      {
+        title: 'Lesiones traumáticas',
+        description: 'Fracturas óseas, Heridas penetrantes o cortantes.',
+        icon: 'tabler:number-3-small',
+      },
+      {
+        title: 'Problemas respiratorios',
+        description: 'Asma grave o dificultad respiratoria aguda, Edema de pulmón.',
+        icon: 'tabler:number-4-small',
+      },
+      {
+        title: 'Envenenamiento',
+        description: 'Ingestión de sustancias tóxicas.',
+        icon: 'tabler:number-5-small',
+      },
+      {
+        title: 'Quemaduras',
+        description: 'En especial si afectan una gran área del cuerpo o comprometen las vías respiratorias.',
+        icon: 'tabler:number-6-small',
+      }
+    ]}
+    image={{
+      src: '~/assets/images/emergency.jpg',
+      alt: 'Emergency illustration',
+    }}
+  />
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="Otras causas de emergencias."
+    isReversed={false}
+    items={[
+      {
+        title: 'Reacciones alérgicas',
+        description: 'Anafilaxia, Edema de Glotis.',
+        icon: 'tabler:number-7-small',
+      },
+      {
+        title: 'Convulsiones',
+        icon: 'tabler:number-8-small',
+      },
+      {
+        title: 'Efectos adversos de fármacos',
+        icon: 'tabler:number-9-small',
+      },
+      {
+        title: 'Infecciones severas',
+        description: 'Neumonias, Infecciones urinarias, Sepsis.',
+        icon: 'tabler:number-10-small',
+      },
+      {
+        title: 'Complicaciones de Enfermedades Crónicas',
+        description: 'Descompensación de diabetes, insuficiencia renal o insuficiencia cardíaca.',
+        icon: 'tabler:number-11-small',
+      },
+      {
+        title: 'Hemorragias',
+        icon: 'tabler:number-12-small',
+      }
+    ]}
+    image={{
+      src: '~/assets/images/emergency1.jpg',
+      alt: 'Emergency illustration',
+    }}
+  />
+
+  <!---------- Table Hospitales----------------------------- -->
+
+  <Table title={rowsDataHospital.title} rowsData={rowsDataHospital.rowsData} />
+
+
+  <!---------- Table Clinicas----------------------------- -->
+
+  <Table title={rowsDataSanatorio.title} rowsData={rowsDataSanatorio.rowsData} />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="En caso de urgencia en salud mental llamar:"
+    tagline="ORIENTACIÓN Y APOYO EN LA URGENCIA DE SALUD MENTAL"
+    columns={1}
+    items={[
+      {
+        title: '0800-777-2100',
+        description:
+          'Primera asistencia de escucha, contención y acompañamiento.',
+        icon: 'tabler:phone-plus',
+        classes:{title:'text-3xl md:text-5xl', icon: 'mx-auto'} 
+      },
+      
+    ]
+    
+    }
+    classes={{ container: 'max-w-5xl, text-center'}}
+      
+  />
+
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Preguntas Frecuentes - FAQs"
+    subtitle="Dudas frecuentes en casos de urgencias o emergencias médicas."
+    columns={1}
+    items={[
+
+      {
+        title: '¿Qué es una URGENCIA médica?',
+        description:
+          'Situación que requiere atención médica temprana, pero no suele representar un riesgo inminente para la vida o la integridad física de una persona. Las urgencias médicas pueden gestionarse con algo de tiempo pero se recomienda consultar por guardia.',
+      },
+      {
+        title: '¿Qué es una EMERGENCIA médica?',
+        description:
+          'Situación que representa un riesgo inminente para la vida o la integridad física de una persona. Estas situaciones requieren atención médica inmediata y prioritaria.',
+      },
+      {
+        title: '¿Cuando es conveniente acudir a una guardia de urgencias o emergencias?',
+        description:
+          'Existen muchas causas que requieren atención médica rápida. Siempre es mejor consultar con un profesional médico si tienes dudas sobre la gravedad de tus síntomas o lesiones.',
+      },
+      {
+        title: '¿Que debo hacer en caso de emergencia médica?',
+        description:
+          "Manten la calma, evalúa la situación, llama al servicio de emergencia <span class='font-bold'>107</span> y <span class='font-bold'>911</span>.",
+      },
+      {
+        title: '¿Qué es una urgencia en salud mental?',
+        description:
+          'Situación en la que una persona experimenta un episodio agudo de deterioro psicológico o comportamental que pone en riesgo su propia seguridad o la de otras personas. Este tipo de crisis requiere una evaluación y atención inmediata.',
+      },
+      {
+        title: 'Que debo hacer ante una urgencia en salud mental?',
+        description: 'Busca ayuda profesional de inmediato llamando a la línea de ORIENTACIÓN Y APOYO EN LA URGENCIA DE SALUD MENTAL <span class="font-bold">0800-777-2100</span>, acude una guardia de emergencias o contacta con un profesional de la salud mental de confianza.'
+      }
+    ]}
+  />
+
+  
+</Layout>
