@@ -12,23 +12,7 @@ export const headerData = {
         {
           text: 'Medicina General',
           href: getPermalink('/homes/medicinageneral'),
-        },
-        {
-          text: 'SaaS',
-          href: getPermalink('/homes/saas'),
-        },
-        {
-          text: 'Startup',
-          href: getPermalink('/homes/startup'),
-        },
-        {
-          text: 'Mobile App',
-          href: getPermalink('/homes/mobile-app'),
-        },
-        {
-          text: 'Personal',
-          href: getPermalink('/homes/personal'),
-        },
+        }        
       ],
     },
     {
@@ -47,21 +31,13 @@ export const headerData = {
           href: getPermalink('/emergency'),
         },
         {
-          text: 'About us',
-          href: getPermalink('/about'),
-        },
-        {
-          text: 'Contact',
-          href: getPermalink('/contact'),
-        },
-        {
           text: 'Términos',
           href: getPermalink('/terms'),
         },
         {
           text: 'Políticas de Privacidad',
           href: getPermalink('/privacy'),
-        },
+        }
       ],
     },
     {
@@ -72,27 +48,15 @@ export const headerData = {
           href: getBlogPermalink(),
         },
         {
-          text: 'Article',
-          href: getPermalink('get-started-website-with-astro-tailwind-css', 'post'),
-        },
-        {
-          text: 'Article (with MDX)',
-          href: getPermalink('markdown-elements-demo-post', 'post'),
-        },
-        {
-          text: 'Category Page',
-          href: getPermalink('tutorials', 'category'),
-        },
-        {
-          text: 'Tag Page',
-          href: getPermalink('astro', 'tag'),
-        },
+          text: 'Primeros Auxilios',
+          href: getPermalink('primeros-auxilios', 'category'),
+        }
       ],
     },
     {
       text: 'Urgencias',
       href: '/emergency',
-    },
+    }
   ],
   actions: [{ text: 'Turnos', href: 'https://cal.com/enriquecarbo/', target: '_blank' }],
 };
@@ -112,24 +76,22 @@ export const footerData = {
       links: [
         { text: 'Turnos Web', href: '/#turnosweb' },
         { text: 'Demanda espontánea', href: '/#demandaespontanea' },
-        { text: 'Atom', href: '#' },
-        { text: 'Electron', href: '#' },
-        { text: 'AstroWind Desktop', href: '#' },
       ],
     },
     {
       title: 'Urgencias',
       links: [
-        { text: 'Urgencias', href: '/emergency' },
-        { text: 'Community Forum', href: '#' },
-        { text: 'Professional Services', href: '#' },
-        
+        { text: 'Urgencias', href: '/emergency' }        
       ],
     },
     {
       title: 'Blog',
       links: [
-        { text: 'Blog', href: '/blog#' },
+        { text: 'Blog', href: '/blog' },
+        {
+          text: 'Primeros Auxilios',
+          href: getPermalink('primeros-auxilios', 'category'),
+        }
       ],
     },
   ],
