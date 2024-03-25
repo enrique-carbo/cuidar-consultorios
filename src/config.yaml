@@ -1,6 +1,6 @@
 site:
   name: CUIDAR
-  site: 'https://astrowind.vercel.app'
+  site: 'https://cuidarconsultorios.netlify.app/'
   base: '/'
   trailingSlash: false
 
